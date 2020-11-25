@@ -1,0 +1,306 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffc62970d3014b44937dcfd59da5311, type: 3}
+  m_Name: Spheres 1
+  m_EditorClassIdentifier: 
+  indent: 20
+  SizeObject: {x: 10, y: 3, z: 20}
+  PositionOffset: {x: 0, y: 1.5, z: 0}
+  CildObjects:
+  - name: Sphere
+    type: 0
+    position: {x: -4, y: 0.5, z: 10}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (2)
+    type: 0
+    position: {x: 4, y: 0.5, z: -10}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (3)
+    type: 0
+    position: {x: -3, y: 0.5, z: -2.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (4)
+    type: 0
+    position: {x: -1.7, y: 0.5, z: -0.7}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (5)
+    type: 0
+    position: {x: 1.7, y: 0.5, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (6)
+    type: 0
+    position: {x: 3.5, y: 0.5, z: 4.1}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (7)
+    type: 0
+    position: {x: 2.9, y: 0.5, z: 5.9}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (8)
+    type: 0
+    position: {x: 1.8000001, y: 0.5, z: 7.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (9)
+    type: 0
+    position: {x: 0.1, y: 0.5, z: 8.900001}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (10)
+    type: 0
+    position: {x: -1.9, y: 0.5, z: 9.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (11)
+    type: 0
+    position: {x: -3.7, y: 0.5, z: -3.9}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (12)
+    type: 0
+    position: {x: -2.8, y: 0.5, z: -7.2000003}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (13)
+    type: 0
+    position: {x: -1.4, y: 0.5, z: -8.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (14)
+    type: 0
+    position: {x: 0.2, y: 0.5, z: -9.3}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (15)
+    type: 0
+    position: {x: 2.2, y: 0.5, z: -9.7}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (16)
+    type: 0
+    position: {x: 3, y: 0.5, z: 2.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (17)
+    type: 0
+    position: {x: -3.6, y: 0.5, z: -5.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (18)
+    type: 0
+    position: {x: -4, y: 0.5, z: 8.400001}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (19)
+    type: 0
+    position: {x: -2.3, y: 0.5, z: 8.1}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (20)
+    type: 0
+    position: {x: -0.5, y: 0.5, z: 7.2000003}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (21)
+    type: 0
+    position: {x: 0.8, y: 0.5, z: 6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (22)
+    type: 0
+    position: {x: 1.8000001, y: 0.5, z: 4.1}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (23)
+    type: 0
+    position: {x: 0.90000004, y: 0.5, z: 2.3}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (24)
+    type: 0
+    position: {x: -0.6, y: 0.5, z: 0.90000004}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 300a2c6eb1afac1428cfd036a77a9ba7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (25)
+    type: 0
+    position: {x: 0.5, y: 0.5, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (26)
+    type: 0
+    position: {x: -1, y: 0.5, z: -2.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (27)
+    type: 0
+    position: {x: 4, y: 0.5, z: -8.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (28)
+    type: 0
+    position: {x: 2.4, y: 0.5, z: -8.1}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (29)
+    type: 0
+    position: {x: 0.8, y: 0.5, z: -7.7000003}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (30)
+    type: 0
+    position: {x: -0.5, y: 0.5, z: -6.9}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (31)
+    type: 0
+    position: {x: -1.7, y: 0.5, z: -5.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere (32)
+    type: 0
+    position: {x: -1.9, y: 0.5, z: -4.2000003}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: caef1304d03a80f4ca86f8d07039bea7, type: 2}
+    mass: 1
+    joints: []

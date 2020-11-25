@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffc62970d3014b44937dcfd59da5311, type: 3}
+  m_Name: Tower
+  m_EditorClassIdentifier: 
+  indent: 10
+  SizeObject: {x: 0, y: 0, z: 0}
+  PositionOffset: {x: 0, y: 0, z: 0}
+  CildObjects:
+  - name: Cube (3)
+    type: 3
+    position: {x: 0, y: 0.8, z: 0}
+    rotation: {x: -0, y: -0.344896, z: -0, w: 0.93864095}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 4
+      breakForce: 10
+      breakTorque: 10
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: -1
+      breakForce: Infinity
+      breakTorque: Infinity
+      massScale: 1
+  - name: Cube (4)
+    type: 3
+    position: {x: 0, y: 1.8000001, z: 0}
+    rotation: {x: -0, y: -0.344896, z: -0, w: 0.93864095}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: -1
+      breakForce: 20
+      breakTorque: 10
+      massScale: 2
+  - name: Cube (5)
+    type: 3
+    position: {x: 0, y: 2.8, z: 0}
+    rotation: {x: -0, y: -0.344896, z: -0, w: 0.93864095}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: -1
+      breakForce: 5
+      breakTorque: 10
+      massScale: 2
+  - name: Cube (6)
+    type: 3
+    position: {x: 0, y: 3.8, z: 0}
+    rotation: {x: -0, y: -0.344896, z: -0, w: 0.93864095}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: -1
+      breakForce: 30
+      breakTorque: 10
+      massScale: 1
+  - name: Cube (7)
+    type: 3
+    position: {x: 0, y: 4.8, z: 0}
+    rotation: {x: -0, y: -0.344896, z: -0, w: 0.93864095}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: -1
+      breakForce: 10
+      breakTorque: 50
+      massScale: 2
+  - name: Cube (8)
+    type: 3
+    position: {x: 0, y: 5.8, z: 0}
+    rotation: {x: -0, y: -0.344896, z: -0, w: 0.93864095}
+    scale: {x: 1, y: 1, z: 1}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []

@@ -1,0 +1,1755 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffc62970d3014b44937dcfd59da5311, type: 3}
+  m_Name: Tower 2
+  m_EditorClassIdentifier: 
+  indent: 10
+  SizeObject: {x: 10, y: 10, z: 10}
+  PositionOffset: {x: 0, y: 5, z: 0}
+  CildObjects:
+  - name: Cube
+    type: 3
+    position: {x: 0, y: 0.4, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (1)
+    type: 3
+    position: {x: 0, y: 0.4, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (2)
+    type: 3
+    position: {x: -2, y: 0.4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (3)
+    type: 3
+    position: {x: 2, y: 0.4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (4)
+    type: 3
+    position: {x: 2, y: 0.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (5)
+    type: 3
+    position: {x: 2, y: 0.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (6)
+    type: 3
+    position: {x: 1.2, y: 0.4, z: 1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (7)
+    type: 3
+    position: {x: 0.8, y: 0.4, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (8)
+    type: 3
+    position: {x: -0.8, y: 0.4, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (9)
+    type: 3
+    position: {x: -2, y: 0.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (10)
+    type: 3
+    position: {x: -2, y: 0.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (11)
+    type: 3
+    position: {x: 0.8, y: 0.4, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (12)
+    type: 3
+    position: {x: -0.8, y: 0.4, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (13)
+    type: 3
+    position: {x: 1.2, y: 0.4, z: -1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (14)
+    type: 3
+    position: {x: -1.2, y: 0.4, z: 1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (15)
+    type: 3
+    position: {x: -1.2, y: 0.4, z: -1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (16)
+    type: 3
+    position: {x: 0, y: 0.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (17)
+    type: 3
+    position: {x: 0, y: 0.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (18)
+    type: 3
+    position: {x: -0.8, y: 0.4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (19)
+    type: 3
+    position: {x: 0.8, y: 0.4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (20)
+    type: 3
+    position: {x: 0, y: 1.2, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (21)
+    type: 3
+    position: {x: 0, y: 1.2, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (22)
+    type: 3
+    position: {x: -2, y: 1.2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (23)
+    type: 3
+    position: {x: 2, y: 1.2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (24)
+    type: 3
+    position: {x: 2, y: 1.2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 4
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (25)
+    type: 3
+    position: {x: 2, y: 1.2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 5
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (26)
+    type: 3
+    position: {x: 1.2, y: 1.2, z: 1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 27
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 25
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (27)
+    type: 3
+    position: {x: 0.8, y: 1.2, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 7
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (28)
+    type: 3
+    position: {x: -0.8, y: 1.2, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 8
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (29)
+    type: 3
+    position: {x: -2, y: 1.2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 9
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 9
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (30)
+    type: 3
+    position: {x: -2, y: 1.2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 10
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 10
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (31)
+    type: 3
+    position: {x: 0.8, y: 1.2, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 11
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (32)
+    type: 3
+    position: {x: -0.8, y: 1.2, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 12
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (33)
+    type: 3
+    position: {x: 1.2, y: 1.2, z: -1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 24
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 31
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (34)
+    type: 3
+    position: {x: -1.2, y: 1.2, z: 1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 29
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 28
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (35)
+    type: 3
+    position: {x: -1.2, y: 1.2, z: -1.2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 30
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 32
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (36)
+    type: 3
+    position: {x: 0, y: 1.2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 16
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (37)
+    type: 3
+    position: {x: 0, y: 1.2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 17
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (38)
+    type: 3
+    position: {x: -0.8, y: 1.2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (39)
+    type: 3
+    position: {x: 0.8, y: 1.2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 19
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (40)
+    type: 3
+    position: {x: 0, y: 2, z: 1.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 20
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (41)
+    type: 3
+    position: {x: 0, y: 2, z: -1.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 21
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (42)
+    type: 3
+    position: {x: -1.6, y: 2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 22
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (43)
+    type: 3
+    position: {x: 1.6, y: 2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 23
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (44)
+    type: 3
+    position: {x: 2, y: 2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 82
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 76
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 24
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (45)
+    type: 3
+    position: {x: 2, y: 2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 25
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (46)
+    type: 3
+    position: {x: 0.8, y: 2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 26
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (47)
+    type: 3
+    position: {x: 0.8, y: 2, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 27
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (48)
+    type: 3
+    position: {x: -0.8, y: 2, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 28
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (49)
+    type: 3
+    position: {x: -2, y: 2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 29
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (50)
+    type: 3
+    position: {x: -2, y: 2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 30
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (51)
+    type: 3
+    position: {x: 0.8, y: 2, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 31
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (52)
+    type: 3
+    position: {x: -0.8, y: 2, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 32
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (53)
+    type: 3
+    position: {x: 0.8, y: 2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 33
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (54)
+    type: 3
+    position: {x: -0.8, y: 2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 34
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (55)
+    type: 3
+    position: {x: -0.8, y: 2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 57
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 53
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 35
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (56)
+    type: 3
+    position: {x: 0, y: 2, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 46
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 54
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 36
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (57)
+    type: 3
+    position: {x: 0, y: 2, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 37
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (58)
+    type: 3
+    position: {x: -0.8, y: 2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 55
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 54
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 38
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (59)
+    type: 3
+    position: {x: 0.8, y: 2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 46
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 53
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 39
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (60)
+    type: 3
+    position: {x: 0.8, y: 2.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 46
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (61)
+    type: 3
+    position: {x: 0.8, y: 2.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 53
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (62)
+    type: 3
+    position: {x: -0.8, y: 2.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 54
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (63)
+    type: 3
+    position: {x: -0.8, y: 2.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (64)
+    type: 3
+    position: {x: 0, y: 2.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (65)
+    type: 3
+    position: {x: 0, y: 2.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (66)
+    type: 3
+    position: {x: -0.8, y: 2.8, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (67)
+    type: 3
+    position: {x: 0.8, y: 2.8, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (68)
+    type: 3
+    position: {x: 0.8, y: 3.6000001, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 72
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 75
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (69)
+    type: 3
+    position: {x: 0.8, y: 3.6000001, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 75
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 73
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (70)
+    type: 3
+    position: {x: -0.8, y: 3.6000001, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 72
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 74
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (71)
+    type: 3
+    position: {x: -0.8, y: 3.6000001, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 74
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 73
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (72)
+    type: 3
+    position: {x: 0, y: 3.6000001, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (73)
+    type: 3
+    position: {x: 0, y: 3.6000001, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 71
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (74)
+    type: 3
+    position: {x: -0.8, y: 3.6000001, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (75)
+    type: 3
+    position: {x: 0.8, y: 3.6000001, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (76)
+    type: 3
+    position: {x: 2, y: 2.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (77)
+    type: 3
+    position: {x: 2, y: 2.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 83
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 45
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (78)
+    type: 3
+    position: {x: -2, y: 2.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 49
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 84
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (79)
+    type: 3
+    position: {x: -2, y: 2.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 50
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 85
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (80)
+    type: 3
+    position: {x: 0.8, y: 2.8, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 51
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 86
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (81)
+    type: 3
+    position: {x: -0.8, y: 2.8, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 87
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 52
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (82)
+    type: 3
+    position: {x: 2, y: 3.6000001, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (83)
+    type: 3
+    position: {x: 2, y: 3.6000001, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (84)
+    type: 3
+    position: {x: -2, y: 3.6000001, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (85)
+    type: 3
+    position: {x: -2, y: 3.6000001, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (86)
+    type: 3
+    position: {x: 0.8, y: 3.6000001, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (87)
+    type: 3
+    position: {x: -0.8, y: 3.6000001, z: -2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (88)
+    type: 3
+    position: {x: 0.8, y: 2.8, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 47
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 90
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (89)
+    type: 3
+    position: {x: -0.8, y: 2.8, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 48
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 91
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (90)
+    type: 3
+    position: {x: 0.8, y: 3.6000001, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (91)
+    type: 3
+    position: {x: -0.8, y: 3.6000001, z: 2}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (92)
+    type: 3
+    position: {x: 0.8, y: 4.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 130
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 131
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 68
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (93)
+    type: 3
+    position: {x: 0.8, y: 4.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 125
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 124
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 69
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (94)
+    type: 3
+    position: {x: -0.8, y: 4.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 128
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 129
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 70
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (95)
+    type: 3
+    position: {x: -0.8, y: 4.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 127
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 126
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+    - typeJoint: 2
+      SerialNamberConnectbody: 71
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (96)
+    type: 3
+    position: {x: 0, y: 4.4, z: 0.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (97)
+    type: 3
+    position: {x: 0, y: 4.4, z: -0.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (98)
+    type: 3
+    position: {x: -0.8, y: 4.4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (99)
+    type: 3
+    position: {x: 0.8, y: 4.4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (100)
+    type: 3
+    position: {x: 0.8, y: 5.2000003, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 92
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (101)
+    type: 3
+    position: {x: 0.8, y: 5.2000003, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 93
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (102)
+    type: 3
+    position: {x: -0.8, y: 5.2000003, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 94
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (103)
+    type: 3
+    position: {x: -0.8, y: 5.2000003, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 95
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (104)
+    type: 3
+    position: {x: 0, y: 5.2000003, z: 0.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (105)
+    type: 3
+    position: {x: 0, y: 5.2000003, z: -0.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (106)
+    type: 3
+    position: {x: -0.8, y: 5.2000003, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (107)
+    type: 3
+    position: {x: 0.8, y: 5.2000003, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (108)
+    type: 3
+    position: {x: 0.8, y: 6, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 112
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (109)
+    type: 3
+    position: {x: 0.8, y: 6, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 115
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (110)
+    type: 3
+    position: {x: -0.8, y: 6, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 114
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (111)
+    type: 3
+    position: {x: -0.8, y: 6, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 113
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (112)
+    type: 3
+    position: {x: 0, y: 6, z: 0.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 110
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (113)
+    type: 3
+    position: {x: 0, y: 6, z: -0.4}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 109
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (114)
+    type: 3
+    position: {x: -0.8, y: 6, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 111
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (115)
+    type: 3
+    position: {x: 0.8, y: 6, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 108
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (116)
+    type: 3
+    position: {x: 0.8, y: 6.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 120
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (117)
+    type: 3
+    position: {x: 0.8, y: 6.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (118)
+    type: 3
+    position: {x: -0.8, y: 6.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 122
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (119)
+    type: 3
+    position: {x: -0.8, y: 6.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 121
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (120)
+    type: 3
+    position: {x: 0, y: 6.8, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 118
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (121)
+    type: 3
+    position: {x: 0, y: 6.8, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 117
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (122)
+    type: 3
+    position: {x: -0.8, y: 6.8, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 119
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (123)
+    type: 3
+    position: {x: 0.8, y: 6.8, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints:
+    - typeJoint: 2
+      SerialNamberConnectbody: 116
+      breakForce: 200
+      breakTorque: 200
+      massScale: 3
+  - name: Cube (124)
+    type: 3
+    position: {x: 0.8, y: 4.4, z: -1.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (125)
+    type: 3
+    position: {x: 1.6, y: 4.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (126)
+    type: 3
+    position: {x: -0.8, y: 4.4, z: -1.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (127)
+    type: 3
+    position: {x: -1.6, y: 4.4, z: -0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (128)
+    type: 3
+    position: {x: -1.6, y: 4.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (129)
+    type: 3
+    position: {x: -0.8, y: 4.4, z: 1.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (130)
+    type: 3
+    position: {x: 0.8, y: 4.4, z: 1.6}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Cube (131)
+    type: 3
+    position: {x: 1.6, y: 4.4, z: 0.8}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 0.8, y: 0.8, z: 0.8}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 1
+    joints: []
+  - name: Sphere
+    type: 0
+    position: {x: 0, y: 7.676, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1.2, y: 1.2, z: 1.2}
+    mesh: {fileID: 0}
+    material: {fileID: 2100000, guid: 8920ce11556949b40a7bb6741615ef84, type: 2}
+    mass: 0.3
+    joints: []
