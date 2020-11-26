@@ -7,28 +7,32 @@ public class MobailControl : MonoBehaviour
     private Vector2 vector;
     private Vector3 direction;
     private Vector3 newPos;
+    [SerializeField] float velocity;
+    [SerializeField] float minDistans;
+    [SerializeField] float maxDistans; 
+    [SerializeField] float speed;
+    [SerializeField] float seconds;
 
-    [SerializeField]
-    private float velocity;
-    [SerializeField]
-    private float minDistans;
-    [SerializeField]
-    private float maxDistans; 
-
-    public float Speed;
-
+    
+    static public float Speed { get; set; }
     Vector2 pos;
     Transform parent;
 
-    delegate void Move();
-    Move move;
+    
+
+    private void Awake()
+    {
+        MobailControl.Speed = speed;
+        Events.seconds = seconds;
+    }
     void Start()
     {
-        move = () => {
+        Events.Move += () => {
             if (ScriptUI.isStarted)
                 if (Input.touchCount > 0 || Input.GetMouseButton(0))
                 {
-                    move = () =>
+                    StartCoroutine(Timer(seconds));
+                    Events.Move = () =>
                     {
                         if (Input.touchCount > 0)
                         {
@@ -49,7 +53,7 @@ public class MobailControl : MonoBehaviour
                             transform.position += direction * velocity;
 
                         }
-                        parent.Translate(Vector3.forward * Speed);
+                        parent.Translate(Vector3.forward * speed);
                     };
                 }
         };
@@ -59,7 +63,10 @@ public class MobailControl : MonoBehaviour
         newPos = transform.position;
         StartCoroutine(loop());
         parent = transform.parent.transform;
+
+        Events.Finish += () => { Events.Move = () => { }; };
     }
+    
     IEnumerator loop()
     {
         float time = 2f;
@@ -72,10 +79,18 @@ public class MobailControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        move.Invoke();
+        Events.Move?.Invoke();
+    }
+
+    IEnumerator Timer(float Seconds)
+    {
+        yield return new WaitForSeconds(Seconds);
+        Events.onFinish();
+
     }
 
     
 
     
 }
+

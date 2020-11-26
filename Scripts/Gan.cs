@@ -12,6 +12,7 @@ public class Gan : MonoBehaviour
     void Start()
     {
         StartCoroutine(loop());
+        Events.Finish += StopAllCoroutines;
     }
 
 
@@ -29,6 +30,7 @@ public class Gan : MonoBehaviour
 
             var rb = shell.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * force, ForceMode.Impulse);
+
         }
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Shredder : MonoBehaviour
 {
-    static public int QuantityLostObjects { get; set; }
+    static public int QuantityObjects { get; set; }
     private void OnTriggerEnter(Collider other)
     {
-        QuantityLostObjects++;
+        QuantityObjects++;
         Destroy(other.gameObject);
     }
 }

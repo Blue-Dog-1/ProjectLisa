@@ -21,15 +21,15 @@ public class Attraction : MonoBehaviour
     [HideInInspector]
     public MeshDeform meshDeform;
     public GameObject Sphere;
-    public static bool isBoostForce = false;
+    public static bool isBoostForce { get; private set; } = false;
 
-    public static Transform Playar;
+    static public Transform Playar { get; private set; }
     public Text QuantityAbsorbedObjectsText;
-    int QuantityAbsorbedObjects = 0;
+    static public int QuantityObjects { get; private set; } = 0;
     void Start()
     {
         Scale = transform.localScale;
-        Attraction.Playar = gameObject.transform;
+        Playar = gameObject.transform;
     }
 
     // Update is called once per frame
@@ -43,15 +43,8 @@ public class Attraction : MonoBehaviour
             if (itemRB != null) {
                 direction = gameObject.transform.position - itemRB.position;
 
-
-                //distnsforse = radius - direction.magnitude;
-                //distnsforse *= distnsforse / 10;
-
                 inverseSquares = force / (1 + (direction.magnitude * direction.magnitude));
 
-                //direction = Quaternion.Euler(0f, direction.magnitude * angle_deviation, 0f) * direction;
-
-                //itemRB.AddForceAtPosition (direction.normalized * inverseSquares, itemRB.position + Vector3.up);
                 itemRB.AddForce(direction.normalized * inverseSquares, ForceMode.Force);
 
             }
@@ -68,8 +61,8 @@ public class Attraction : MonoBehaviour
     {
         collider.enabled = false;
         collider.gameObject.GetComponent<MeshDeform>()._start(gameObject.transform);
-        QuantityAbsorbedObjects++;
-        QuantityAbsorbedObjectsText.text = QuantityAbsorbedObjects.ToString();
+        QuantityObjects++;
+        QuantityAbsorbedObjectsText.text = QuantityObjects.ToString();
     }
 
     
@@ -108,7 +101,6 @@ public class Attraction : MonoBehaviour
             }
         }
         force /= boost;
-        Debug.Log(ScriptUI.isStarted);
 
 
         transform.localScale = ScaleDefolt;

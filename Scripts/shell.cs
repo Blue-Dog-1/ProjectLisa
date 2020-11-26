@@ -16,9 +16,7 @@ public class shell : MonoBehaviour
     }
     private void Start()
     {
-
         ScriptUI.ButtonBoostForce.onClick.AddListener(ButtonClik);
-        Debug.Log(shell.ActivationThreshold);
     }
     void ButtonClik()
     {

@@ -9,42 +9,12 @@ public class SpawnObjects : MonoBehaviour
     public int Quantity;
     public int Level;
 
-    
     public int DistansSpawn;
     float delay;
-    public void Spawn(int quantity)
-    {
-        
-        float indent = 0f;
-        int Index = int.MaxValue;
-        while (quantity >= 1)
-        {
-            var o = new GameObject();
-            var bop = o.AddComponent<BakeObjectPrefab>();
-            Index = RandomeIndex(Index, 0, Objects.Count);
-            bop.Objects = Objects[Index];
-
-            indent += bop.Objects.SizeObject.z;
-
-            StarPosition.z = indent;
-            StarPosition.x = Random.Range(-1, 1);
-
-            o.transform.position = StarPosition;
-            
-            indent += bop.Objects.SizeObject.z / 2;
-
-
-            quantity--;
-
-            bop.Build();
-        }
-
-    }
+    
     public void Start()
     {
-        float speed = gameObject.GetComponent<MobailControl>().Speed;
-        delay = 0.05f * (DistansSpawn / speed);
-        //Spawn(Quantity);
+        delay = 0.05f * (DistansSpawn / MobailControl.Speed);
         StartCoroutine(loop(Quantity));
     }
 
@@ -67,14 +37,11 @@ public class SpawnObjects : MonoBehaviour
 
             indent += bop.Objects.indent;
             
-
             StarPosition.z = indent;
             StarPosition.x = Random.Range(-1, 1);
-
             o.transform.position = StarPosition;
 
             indent += bop.Objects.indent;
-
 
             quantity--;
 
