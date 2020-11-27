@@ -18,21 +18,21 @@ public class ObjectsPrefab : ScriptableObject
 public struct CildObject
 {
     public string name;
-    public PrimitiveType type;
+    public primitiveType type;
     // transform
     public Vector3 position;
     public Quaternion rotation;
     public Vector3 scale;
 
     // mesh 
-    public Mesh mesh;
+    public string mesh;
+    public Mesh Mesh;
     public Material material;
 
     public float mass;
 
     // joint
     
-
     public List<JointsObject> joints;
 
 }

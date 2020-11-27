@@ -6,9 +6,9 @@ public class BakeObjectPrefab : MonoBehaviour
 {
 
     public ObjectsPrefab Objects;
+
     public Vector3 SizeObject = Vector3.one;
     public Vector3 PositionOffset = Vector3.zero;
-
 
 
 #if UNITY_EDITOR
@@ -22,12 +22,16 @@ public class BakeObjectPrefab : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
-
             var obj = transform.GetChild(i).gameObject;
-            
-            cildObject.type = GetPrimitiveType(obj.GetComponent<MeshFilter>().sharedMesh.name);
 
-            cildObject.name = obj.name;
+            var mesh = obj.GetComponent<MeshFilter>().sharedMesh;
+            cildObject.type = GetPrimitiveType(mesh.name);
+            if (cildObject.type == primitiveType.Mesh)
+            {
+                cildObject.mesh = mesh.name;
+                cildObject.Mesh = mesh;
+            }
+            cildObject.name = mesh.name;
            
             cildObject.position = obj.transform.localPosition;
             cildObject.rotation = obj.transform.localRotation;
@@ -48,7 +52,6 @@ public class BakeObjectPrefab : MonoBehaviour
                     {
                         case "CharacterJoint":
                             jointsObject = SetSettingsJoint(j, ComponentType.JointType.CharacterJoint);
-
                         break;
                         case "ConfigurableJoint":
                             jointsObject = SetSettingsJoint(j, ComponentType.JointType.ConfigurableJoint);
@@ -65,7 +68,7 @@ public class BakeObjectPrefab : MonoBehaviour
                     }
 
                 cildObject.joints.Add(jointsObject);
-
+                
                 
             }
             
@@ -111,7 +114,22 @@ public class BakeObjectPrefab : MonoBehaviour
         foreach (CildObject item in Objects.CildObjects)
         {
             // Create objent as primitive
-            var t = GameObject.CreatePrimitive(item.type);
+            GameObject t;
+            if (item.type != primitiveType.Mesh)
+                t = GameObject.CreatePrimitive(ConvetrPrimitiveType(item.type));
+            else
+            {
+                t = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                t.GetComponent<MeshFilter>().mesh = item.Mesh;
+                if (Application.isEditor)
+                    DestroyImmediate(t.GetComponent<Collider>());
+                else
+                    Destroy(t.GetComponent<Collider>());
+                var coll = t.AddComponent<MeshCollider>();
+                coll.sharedMesh = item.Mesh;
+                coll.convex = true;
+
+            }
 
             // Set parent and name
             t.transform.parent = transform;
@@ -157,27 +175,52 @@ public class BakeObjectPrefab : MonoBehaviour
             }
         }
     }
+    
+
 
 #if UNITY_EDITOR
-    PrimitiveType GetPrimitiveType(string name)
+
+    primitiveType GetPrimitiveType(string name)
     {
-        switch (name[1])
+        switch (name)
         {
-            case 'a':
-                return PrimitiveType.Capsule;
-            case 'u':
-                return (name[0] == 'C')? PrimitiveType.Cube: PrimitiveType.Quad;
-            case 'y':
-                return PrimitiveType.Cylinder;
-            case 'p':
-                return PrimitiveType.Sphere;
-            case 'l':
-                return PrimitiveType.Plane;
+            case "Capsule":
+                return primitiveType.Capsule;
+            case "Cube":
+                return primitiveType.Cube;
+            case "Quad":
+                return primitiveType.Quad;
+            case "Cylinder":
+                return primitiveType.Cylinder;
+            case "Sphere":
+                return primitiveType.Sphere;
+            case "Plane":
+                return primitiveType.Plane;
         }
 
-        return PrimitiveType.Cube;
-
+        return primitiveType.Mesh;
     }
+    PrimitiveType ConvetrPrimitiveType(primitiveType type)
+    {
+        switch (type)
+        {
+            case primitiveType.Capsule:
+                return PrimitiveType.Capsule;
+            case primitiveType.Cube:
+                return PrimitiveType.Cube;
+            case primitiveType.Quad:
+                return PrimitiveType.Quad;
+            case primitiveType.Cylinder:
+                return PrimitiveType.Cylinder;
+            case primitiveType.Sphere:
+                return PrimitiveType.Sphere;
+            case primitiveType.Plane:
+                return PrimitiveType.Plane;
+        }
+        return PrimitiveType.Cube;
+    }
+
+
 
     private void OnDrawGizmosSelected()
     {
@@ -185,4 +228,15 @@ public class BakeObjectPrefab : MonoBehaviour
         Gizmos.DrawWireCube(transform.position + PositionOffset, SizeObject);
     }
 #endif
+}
+
+public enum primitiveType
+{
+    Sphere = PrimitiveType.Sphere,
+    Capsule = PrimitiveType.Capsule,
+    Cylinder = PrimitiveType.Cylinder,
+    Cube = PrimitiveType.Cube,
+    Plane = PrimitiveType.Plane,
+    Quad = PrimitiveType.Quad,
+    Mesh = 6
 }
