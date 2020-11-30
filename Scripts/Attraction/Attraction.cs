@@ -17,19 +17,27 @@ public class Attraction : MonoBehaviour
     [Space] [Range(1, 90)]
     public int angle_deviation = 10;
     float inverseSquares;
+    [SerializeField] float secondBust;
+    [SerializeField] float boost;
 
     [HideInInspector]
     public MeshDeform meshDeform;
     public GameObject Sphere;
-    public static bool isBoostForce { get; private set; } = false;
+    static public bool isBoostForce { get; private set; } = false;
 
     static public Transform Playar { get; private set; }
-    public Text QuantityAbsorbedObjectsText;
+
     static public int QuantityObjects { get; private set; } = 0;
+    private void Awake()
+    {
+        isBoostForce = false;
+        QuantityObjects = 0;
+        Playar = gameObject.transform;
+    }
     void Start()
     {
         Scale = transform.localScale;
-        Playar = gameObject.transform;
+       
     }
 
     // Update is called once per frame
@@ -62,16 +70,16 @@ public class Attraction : MonoBehaviour
         collider.enabled = false;
         collider.gameObject.GetComponent<MeshDeform>()._start(gameObject.transform);
         QuantityObjects++;
-        QuantityAbsorbedObjectsText.text = QuantityObjects.ToString();
+        ScriptUI.QuantityAbsorbedObjectsText.text = QuantityObjects.ToString();
     }
 
     
-    public void BoostForce(Button b)
+    public void BoostForce()
     {
-        ScriptUI.Rays.enabled = false;
-        StartCoroutine(BosstRadius(4f, 2.2f, b));
+        Events.Rays.gameObject.SetActive(false);
+        StartCoroutine(BosstRadius(secondBust, boost));
     }
-    public IEnumerator BosstRadius(float time, float boost, Button button)
+    public IEnumerator BosstRadius(float time, float boost)
     {
         isBoostForce = true;
         float speed = 5f;
@@ -108,8 +116,8 @@ public class Attraction : MonoBehaviour
         Sphere.SetActive(false);
 
         
-        button.interactable = (shell.QuantityBoostBoll >= shell.ActivationThreshold);
-        ScriptUI.Rays.enabled = (shell.QuantityBoostBoll >= shell.ActivationThreshold);
+        ScriptUI.ButtonBoostForce.interactable = (shell.QuantityBoostBoll >= shell.ActivationThreshold);
+        Events.Rays.gameObject.SetActive(ScriptUI.ButtonBoostForce.interactable);
         isBoostForce = false;
 
         

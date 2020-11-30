@@ -9,52 +9,64 @@ public class ScriptUI : MonoBehaviour
     GameObject player;
     [SerializeField]
     GameObject startPanel;
+    [SerializeField] Text lavelText;
+    [Space]
     [SerializeField] Text lavelLable;
     [Header("End Level Panel 'ELP' ")]
     [SerializeField] GameObject endLevelPanel;
-    [SerializeField] List<Image> starsELP;
+    [SerializeField] List<StarAnim> starsELP;
 
+    [Space]
     [Header("Bust blok ")]
     [SerializeField] Button buttonBoostForce;
     [SerializeField] Image rays;
     [SerializeField] Image filled;
     [SerializeField] Text quantityBoostBollText;
 
-
+    [Space]
     [Header("Stars blok")]
     [SerializeField] List<Image> stars;
     [SerializeField] Sprite activStars;
     [SerializeField] Sprite disActivStars;
 
+    [Space]
+    [Header("Fireworks")]
+    [SerializeField] GameObject Fireworks;
+    [SerializeField] Text QuantityAbsorbedObjects;
+    [SerializeField] Text OutLableRatioAbsorbedObjects;
+    [SerializeField] Text quantityAbsorbedObjectsText;
+
+
     // boost blok
     static public Button ButtonBoostForce { get; private set; }
     static public Text QuantityBoostBollText { get; private set; }
-    static public Image Rays { get; private set; }
     static public Image Filled { get; private set; }
+    static public Text QuantityAbsorbedObjectsText { get; set; }
 
     static public bool isStarted { get; set; } = false;
 
     [SerializeField] [Range(0f, 1)]
     float[] thresholdsStars = new float[3] { 0.4f, 0.65f, 0.85f };
+
+
     private void Awake()
     {
-
-        Rays = rays;
+        isStarted = false;
+        Events.Rays = rays;
         Filled = filled;
         ButtonBoostForce = buttonBoostForce;
         QuantityBoostBollText = quantityBoostBollText;
+        QuantityAbsorbedObjectsText = quantityAbsorbedObjectsText;
 
         StartCoroutine(Initialization());
         Events.Finish += Finish;
         Events.Finish += StopAllCoroutines;
-        Events.Move += () =>
-        {
+        Events.Move += () => {
             if (isStarted)
                 if (Input.touchCount > 0 || Input.GetMouseButton(0))
-                {
-                    StartCoroutine(loop(Events.seconds));
-                }
+                    StartCoroutine(loop());
         };
+
 
     }
     private void Start()
@@ -79,8 +91,7 @@ public class ScriptUI : MonoBehaviour
     
     void Finish()
     {
-        Debug.Log("END LAVEL");
-        
+        Fireworks.SetActive(true);
         /*
          * hiding blok UI an object
          */
@@ -95,43 +106,40 @@ public class ScriptUI : MonoBehaviour
         var allObjects = Shredder.QuantityObjects + Attraction.QuantityObjects;
         var ratio = 1f / allObjects;
         var ratioAbsorbedObjects = ratio * Attraction.QuantityObjects;
+        
+        starsELP[0].StartAnimation((ratioAbsorbedObjects > thresholdsStars[0]));
+        starsELP[0].isActov = (ratioAbsorbedObjects > thresholdsStars[1]);
+        starsELP[1].isActov = (ratioAbsorbedObjects > thresholdsStars[2]);
 
-        int i = 0;
-        foreach (Image star in starsELP)
-        {
-            if (ratioAbsorbedObjects > thresholdsStars[i])  
-            {
-                star.sprite = activStars;
-                var calor = star.color;
-                calor.a = 1f;
-                star.color = calor;
-            }
-            else star.sprite = disActivStars;
-            i++;
-        }
-
+        
+        OutLableRatioAbsorbedObjects.text = "" + ratioAbsorbedObjects;
+        QuantityAbsorbedObjects.text = Attraction.QuantityObjects.ToString();
         SaveLevel();
-
     }
+    
     void SaveLevel()
     {
         var carenLevel = PlayerPrefs.GetInt("Level", 0);
-        Debug.Log(PlayerPrefs.GetInt("Level", 0));
-
+        lavelText.text += carenLevel;
         PlayerPrefs.SetInt("Level", carenLevel + 1);
-
         PlayerPrefs.Save();
     }
 
-    public IEnumerator loop(float seconds)
+    /// <summary>
+    /// real-time star counting
+    /// </summary>
+    public IEnumerator loop()
     {
-        float counterTime = 0f;
+        Transform finish = GameObject.FindGameObjectWithTag("Finish").transform;
+        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log(player.name);
+        float obsolutDistance = (finish.position - player.position).magnitude;
         while (true)
         {
             yield return new WaitForSeconds(0.5f);
-            counterTime += 0.5f;
-            float ratioTime = (1f / seconds) * counterTime;
-            
+            float carentDistance = (finish.position - player.position).magnitude;
+            float ratioTime = (1f / obsolutDistance) * (obsolutDistance - carentDistance);
+
             int allObjects = Shredder.QuantityObjects + Attraction.QuantityObjects;
             float ratio = 1f / allObjects;
             float ratioAbsorbedObjects = ratio * Attraction.QuantityObjects;
@@ -151,25 +159,5 @@ public class ScriptUI : MonoBehaviour
                 i++;
             }
         }
-
     }
-    
-
-    /*
-     * 
-     * переменая T это процентное соотншение пройденого время оно равно = (1f / Все время) * проеденое время;
-     * 
-     * переменая К количестов всех объектов = количество седеных объектов + количестов потеряных объектов;
-     * 
-     * пременая М это соотношение сьеденых обектов к потеряным = К * количество сьеденых объектов;
-     * 
-     * результат переменя А = М * Т;  в зовисемости от времени Т бутет расти М (ели М = 1 а Т = 0,1 то и м будет равно 0,1 )
-     *  
-     * 
-     */
-
-
-
-
-
 }

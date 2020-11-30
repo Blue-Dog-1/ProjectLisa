@@ -12,17 +12,17 @@ public class MobailControl : MonoBehaviour
     [SerializeField] float maxDistans; 
     [SerializeField] float speed;
     [SerializeField] float seconds;
+    [SerializeField] GameObject ControllPanel;
 
     
     static public float Speed { get; set; }
-    Vector2 pos;
     Transform parent;
 
     
 
     private void Awake()
     {
-        MobailControl.Speed = speed;
+        Speed = speed;
         Events.seconds = seconds;
     }
     void Start()
@@ -31,40 +31,23 @@ public class MobailControl : MonoBehaviour
             if (ScriptUI.isStarted)
                 if (Input.touchCount > 0 || Input.GetMouseButton(0))
                 {
-                    StartCoroutine(Timer(seconds));
+                    ControllPanel.SetActive(true);
                     Events.Move = () =>
                     {
-                        if (Input.touchCount > 0)
-                        {
-                            Touch touch = Input.GetTouch(0);
-
-                            if (touch.phase == TouchPhase.Began)
-                                pos = touch.position;
-                            else if (touch.phase == TouchPhase.Ended)
-                                pos = Vector2.zero;
-
-                            if (touch.phase == TouchPhase.Stationary)
-                                pos = touch.position;
-
-                            vector = (pos - touch.position).normalized;
-
-                            direction.x = -vector.x;
-                            //direction.z = -vector.y;
-                            transform.position += direction * velocity;
-
-                        }
                         parent.Translate(Vector3.forward * speed);
                     };
                 }
         };
 
         direction = Vector3.zero;
-        pos = Vector2.zero;
         newPos = transform.position;
         StartCoroutine(loop());
         parent = transform.parent.transform;
 
-        Events.Finish += () => { Events.Move = () => { }; };
+        Events.Finish += () => { 
+            Events.Move = () => { };
+            gameObject.SetActive(false);
+        };
     }
     
     IEnumerator loop()
@@ -81,16 +64,6 @@ public class MobailControl : MonoBehaviour
     {
         Events.Move?.Invoke();
     }
-
-    IEnumerator Timer(float Seconds)
-    {
-        yield return new WaitForSeconds(Seconds);
-        Events.onFinish();
-
-    }
-
-    
-
     
 }
 

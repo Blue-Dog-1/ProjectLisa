@@ -11,16 +11,17 @@ public class SpawnObjects : MonoBehaviour
 
     public int DistansSpawn;
     float delay;
-    
+
     public void Start()
     {
         delay = 0.05f * (DistansSpawn / MobailControl.Speed);
         StartCoroutine(loop(Quantity));
+        Events.BrakeSpawn += delegate () { StopAllCoroutines();  };
     }
 
     int RandomeIndex(int oldindex, int min, int max)
     {
-        var i = Random.Range(min, max);
+        int i = Random.Range(min, max);
         if (oldindex == i) return RandomeIndex(oldindex, min, max);
         else return i;
     }
@@ -34,7 +35,6 @@ public class SpawnObjects : MonoBehaviour
             var bop = o.AddComponent<BakeObjectPrefab>();
             Index = RandomeIndex(Index, 0, Objects.Count);
             bop.Objects = Objects[Index];
-
             indent += bop.Objects.indent;
             
             StarPosition.z = indent;

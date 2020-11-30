@@ -23,7 +23,7 @@ public class shell : MonoBehaviour
         QuantityBoostBoll -= ActivationThreshold;
         if (QuantityBoostBoll < ActivationThreshold)
         {
-            ScriptUI.Rays.enabled = false;
+            Events.Rays.gameObject.SetActive(false);
             ScriptUI.ButtonBoostForce.interactable = false;
         }
         ScriptUI.Filled.fillAmount = Mathf.Clamp((1f / ActivationThreshold) * QuantityBoostBoll, 0f, 1f);
@@ -38,7 +38,7 @@ public class shell : MonoBehaviour
         ScriptUI.Filled.fillAmount += (1f / shell.ActivationThreshold);
         if (QuantityBoostBoll >= ActivationThreshold)
         {
-            ScriptUI.Rays.enabled = true;
+            Events.Rays.gameObject.SetActive(true);
             ScriptUI.ButtonBoostForce.interactable = !Attraction.isBoostForce;
         }
         other.enabled = false;
