@@ -12,6 +12,9 @@ public class MobailControlerPanel : MonoBehaviour, IDragHandler
     [SerializeField] float velocity;
     Vector3 posPlayr;
     [SerializeField] float Clamp;
+    [SerializeField] float ClampZ;
+
+    float booferAxisZ = 0f;
 
     void Start()
     {
@@ -21,14 +24,19 @@ public class MobailControlerPanel : MonoBehaviour, IDragHandler
     {
         position = eventData.delta;
 
+        // X axis move
         position *= Time.deltaTime;
         posPlayr.x += position.x;
-        posPlayr.z = Playar.position.z;
         posPlayr.x = Mathf.Clamp(posPlayr.x, -Clamp, Clamp);
 
-        Playar.position = posPlayr;
+        // Z axis move
+        posPlayr.z = Playar.position.z;
+        posPlayr.z += position.y;
+        posPlayr.z = Mathf.Clamp(posPlayr.z, Playar.parent.transform.position.z + ClampZ, Playar.parent.transform.position.z);
 
-        //Playar.Translate(position.x, 0f, position.y);
+        Playar.position = posPlayr;
+        //Playar.position = Vector3.Lerp(Playar.position, posPlayr, Time.deltaTime * velocity);
+
     }
    
    

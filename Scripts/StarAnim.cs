@@ -28,10 +28,13 @@ public class StarAnim : MonoBehaviour
     }
     public void StartAnimation(bool Activ)
     {
-        im = GetComponent<Image>();
-        im.enabled = true;
-        anim = GetComponent<Animation>();
-        anim.Play();
+        if (Activ)
+        {
+            im = GetComponent<Image>();
+            im.enabled = Activ;
+            anim = GetComponent<Animation>();
+            anim.Play();
+        }
     }
 
 

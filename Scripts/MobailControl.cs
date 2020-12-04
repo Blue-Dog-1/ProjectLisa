@@ -17,13 +17,13 @@ public class MobailControl : MonoBehaviour
     
     static public float Speed { get; set; }
     Transform parent;
-
     
 
     private void Awake()
     {
         Speed = speed;
         Events.seconds = seconds;
+        Events.Player = gameObject;
     }
     void Start()
     {
@@ -64,6 +64,8 @@ public class MobailControl : MonoBehaviour
     {
         Events.Move?.Invoke();
     }
+
+    public void OnFnish() => Events.onFinish();
     
 }
 

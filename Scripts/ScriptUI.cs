@@ -37,18 +37,24 @@ public class ScriptUI : MonoBehaviour
     [SerializeField] Text quantityAbsorbedObjectsText;
 
 
+    [Space]
+    [Header("No internet connection")]
+    [SerializeField] GameObject NoInternetConnection;
+
+
+
+
     // boost blok
     static public Button ButtonBoostForce { get; private set; }
     static public Text QuantityBoostBollText { get; private set; }
     static public Image Filled { get; private set; }
     static public Text QuantityAbsorbedObjectsText { get; set; }
-
     static public bool isStarted { get; set; } = false;
 
     [SerializeField] [Range(0f, 1)]
     float[] thresholdsStars = new float[3] { 0.4f, 0.65f, 0.85f };
 
-
+    bool isPause = false;
     private void Awake()
     {
         isStarted = false;
@@ -58,7 +64,7 @@ public class ScriptUI : MonoBehaviour
         QuantityBoostBollText = quantityBoostBollText;
         QuantityAbsorbedObjectsText = quantityAbsorbedObjectsText;
 
-        StartCoroutine(Initialization());
+        
         Events.Finish += Finish;
         Events.Finish += StopAllCoroutines;
         Events.Move += () => {
@@ -71,8 +77,33 @@ public class ScriptUI : MonoBehaviour
     }
     private void Start()
     {
-        lavelLable.text += PlayerPrefs.GetInt("Level", 0).ToString();
+        lavelLable.text += PlayerPrefs.GetInt("Level", 1).ToString();
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+        #region check internet connection
+        string HtmlText = Events.GetHtmlFromUri("http://google.com");
+        if (HtmlText == "")
+        {
+            //No connection
+            Debug.Log("No connection");
+            NoInternetConnection.SetActive(true);
+            buttonBoostForce.gameObject.transform.parent.gameObject.SetActive(false);
+            stars[0].gameObject.transform.parent.parent.gameObject.SetActive(false);
+            StopAllCoroutines();
+        }
+        else if (!HtmlText.Contains("schema.org/WebPage"))
+        {
+            //Redirecting since the beginning of googles html contains that 
+            //phrase and it was not found
+        }
+        else
+        {
+            //success
+            Debug.Log("Invernet Conected");
+            NoInternetConnection.SetActive(false);
+            StartCoroutine(Initialization());
+        }
+        #endregion
     }
     public void Restart()
     {
@@ -80,12 +111,25 @@ public class ScriptUI : MonoBehaviour
         shell.QuantityBoostBoll = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void Pause()
+    {
+        if (!isPause)
+        {
+            Time.timeScale = 0f;
+            isPause = true;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            isPause = false;
+        }
+    }
 
     IEnumerator Initialization()
     {
         yield return new WaitForSeconds(2f);
         startPanel.SetActive(false);
-        ScriptUI.isStarted = true;
+        isStarted = true;
     }
 
     
@@ -110,20 +154,36 @@ public class ScriptUI : MonoBehaviour
         starsELP[0].StartAnimation((ratioAbsorbedObjects > thresholdsStars[0]));
         starsELP[0].isActov = (ratioAbsorbedObjects > thresholdsStars[1]);
         starsELP[1].isActov = (ratioAbsorbedObjects > thresholdsStars[2]);
-
         
         OutLableRatioAbsorbedObjects.text = "" + ratioAbsorbedObjects;
         QuantityAbsorbedObjects.text = Attraction.QuantityObjects.ToString();
-        SaveLevel();
+
+        #region if absorbed objects count < thresholds first stars show ads ad dont save
+        if ((ratioAbsorbedObjects > thresholdsStars[0]))
+            SaveLevel();
+        else
+        {
+            Events.ShowAdsInNexLevel = true;
+            QuantityAbsorbedObjects.text = "few absorbed objects to go to the next level";
+            // red color text 
+            QuantityAbsorbedObjects.color = new Color(1f, 0f, 0f);
+        }
+        #endregion
+
+
+        
     }
-    
+
     void SaveLevel()
     {
-        var carenLevel = PlayerPrefs.GetInt("Level", 0);
+        var carenLevel = PlayerPrefs.GetInt("Level", 1);
         lavelText.text += carenLevel;
         PlayerPrefs.SetInt("Level", carenLevel + 1);
         PlayerPrefs.Save();
     }
+    
+    public void ResetPlayerPrefs() => Events.ResetSave();
+
 
     /// <summary>
     /// real-time star counting
@@ -132,7 +192,6 @@ public class ScriptUI : MonoBehaviour
     {
         Transform finish = GameObject.FindGameObjectWithTag("Finish").transform;
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-        Debug.Log(player.name);
         float obsolutDistance = (finish.position - player.position).magnitude;
         while (true)
         {

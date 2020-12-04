@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class SpawnObjects : MonoBehaviour
 {
-    public Vector3 StarPosition;
-    public List<ObjectsPrefab> Objects;
-    public int Quantity;
+    [SerializeField]
+    Vector3 StarPosition;
+    [SerializeField]
+    List<ObjectsPrefab> Objects;
+    [SerializeField]
+    int Quantity;
     public int Level;
-
+    [SerializeField] int DistanceToNextSpawn;
     public int DistansSpawn;
     float delay;
+
+    [Space]
+    [Header("Ground")]
+    [SerializeField] GameObject groundCarent;
 
     public void Start()
     {
@@ -29,6 +36,8 @@ public class SpawnObjects : MonoBehaviour
     {
         float indent = 0f;
         int Index = int.MaxValue;
+
+        Vector3 position = groundCarent.transform.position; 
         while (quantity >= 1)
         {
             var o = new GameObject();
@@ -51,7 +60,20 @@ public class SpawnObjects : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(0.1f);
-            if ((transform.position - StarPosition).magnitude > 40f) continue;
+
+            #region Ground generation
+            if ((position.z - transform.position.z) < 250f)
+            {
+                position = groundCarent.transform.position;
+                position.z += groundCarent.transform.localScale.y;
+
+                var newgroundCarent = Instantiate(groundCarent, position, groundCarent.transform.rotation);
+                groundCarent = newgroundCarent;
+            }
+            #endregion
+
+
+            if ((transform.position - StarPosition).magnitude > DistanceToNextSpawn) continue;
             var o = new GameObject();
             var bop = o.AddComponent<BakeObjectPrefab>();
             Index = RandomeIndex(Index, 0, Objects.Count);
@@ -70,12 +92,21 @@ public class SpawnObjects : MonoBehaviour
             quantity--;
             bop.Build();
 
+
+           
         }
     }
+
+    private void Update()
+    {
+        
+    }
+
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, StarPosition);
+        Gizmos.DrawLine(transform.position, groundCarent.transform.position);
     }
 #endif
 
