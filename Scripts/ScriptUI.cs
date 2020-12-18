@@ -36,12 +36,27 @@ public class ScriptUI : MonoBehaviour
     [SerializeField] Text OutLableRatioAbsorbedObjects;
     [SerializeField] Text quantityAbsorbedObjectsText;
 
+    [Space]
+    [Header("Distence to Finish")]
+    [SerializeField] Image DistenceFinish;
+
 
     [Space]
     [Header("No internet connection")]
     [SerializeField] GameObject NoInternetConnection;
 
 
+    [Space]
+    [SerializeField] int minThresholdsAds;
+    [SerializeField] int maxThresholdsAds;
+
+    [Space]
+    [Header("Pause button change sprite")]
+    [SerializeField] Image pauseImage;
+    [SerializeField] Sprite pauseSprite;
+    [SerializeField] Sprite continueSprite;
+
+    bool showAds = false;
 
 
     // boost blok
@@ -64,7 +79,7 @@ public class ScriptUI : MonoBehaviour
         QuantityBoostBollText = quantityBoostBollText;
         QuantityAbsorbedObjectsText = quantityAbsorbedObjectsText;
 
-        
+        startPanel.SetActive(true);
         Events.Finish += Finish;
         Events.Finish += StopAllCoroutines;
         Events.Move += () => {
@@ -73,10 +88,16 @@ public class ScriptUI : MonoBehaviour
                     StartCoroutine(loop());
         };
 
+        Events.Restart += delegate()  {
+            Events.Cliner();
+            StartCoroutine(LoadLevel());
+        };
+
 
     }
     private void Start()
     {
+        showAds = false;
         lavelLable.text += PlayerPrefs.GetInt("Level", 1).ToString();
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
@@ -107,9 +128,25 @@ public class ScriptUI : MonoBehaviour
     }
     public void Restart()
     {
-        Events.Cliner();
+        startPanel.SetActive(true);
         shell.QuantityBoostBoll = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if (showAds)
+            Events.ShowAds?.Invoke();
+        else
+        {
+            Events.Restart?.Invoke();
+        }    
+    }
+
+    IEnumerator LoadLevel()
+    {
+        var scene = SceneManager.GetActiveScene().name;
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+        while(operation.isDone)
+        {
+            yield return null;
+        }
     }
     public void Pause()
     {
@@ -117,14 +154,15 @@ public class ScriptUI : MonoBehaviour
         {
             Time.timeScale = 0f;
             isPause = true;
+            pauseImage.sprite = continueSprite;
         }
         else
         {
             Time.timeScale = 1f;
             isPause = false;
+            pauseImage.sprite = pauseSprite;
         }
     }
-
     IEnumerator Initialization()
     {
         yield return new WaitForSeconds(2f);
@@ -147,7 +185,7 @@ public class ScriptUI : MonoBehaviour
          */
         endLevelPanel.SetActive(true);
 
-        var allObjects = Shredder.QuantityObjects + Attraction.QuantityObjects;
+        var allObjects = Events.QuantityObjects + Attraction.QuantityObjects;
         var ratio = 1f / allObjects;
         var ratioAbsorbedObjects = ratio * Attraction.QuantityObjects;
         
@@ -163,7 +201,7 @@ public class ScriptUI : MonoBehaviour
             SaveLevel();
         else
         {
-            Events.ShowAdsInNexLevel = true;
+            showAds = true;
             QuantityAbsorbedObjects.text = "few absorbed objects to go to the next level";
             // red color text 
             QuantityAbsorbedObjects.color = new Color(1f, 0f, 0f);
@@ -171,7 +209,25 @@ public class ScriptUI : MonoBehaviour
         #endregion
 
 
-        
+        #region last impression counter
+        var LIC = PlayerPrefs.GetInt("Last Impression Counter", 1);
+        if (LIC >= minThresholdsAds && RandomClamp(LIC, maxThresholdsAds))
+        {
+            showAds = true;
+            PlayerPrefs.SetInt("Last Impression Counter", 1);
+        }
+        else 
+            PlayerPrefs.SetInt("Last Impression Counter", LIC + 1);
+
+        #endregion
+
+    }
+    
+    bool RandomClamp(int value, int max)
+    {
+        if (Random.Range(value, max) == value)
+            return true;
+        else return false;
     }
 
     void SaveLevel()
@@ -184,7 +240,12 @@ public class ScriptUI : MonoBehaviour
     
     public void ResetPlayerPrefs() => Events.ResetSave();
 
-
+    public void ShowSettings(bool show)
+    {
+        GameObject.Find("SettingsPanel").SetActive(show);
+        Pause();
+    }
+    
     /// <summary>
     /// real-time star counting
     /// </summary>
@@ -199,12 +260,13 @@ public class ScriptUI : MonoBehaviour
             float carentDistance = (finish.position - player.position).magnitude;
             float ratioTime = (1f / obsolutDistance) * (obsolutDistance - carentDistance);
 
-            int allObjects = Shredder.QuantityObjects + Attraction.QuantityObjects;
+            DistenceFinish.fillAmount = ratioTime;
+
+            int allObjects = Events.QuantityObjects + Attraction.QuantityObjects;
             float ratio = 1f / allObjects;
             float ratioAbsorbedObjects = ratio * Attraction.QuantityObjects;
 
             int i = 0;
-            
             foreach (Image star in stars)
             {
                 if ((ratioAbsorbedObjects * ratioTime) > thresholdsStars[i])

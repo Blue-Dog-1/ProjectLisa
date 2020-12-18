@@ -14,7 +14,7 @@ public class FinishTrigger : MonoBehaviour
         stepZ.z += step;
         transform.position = stepZ;
 
-        PlayerPrefs.SetInt("Step", step + 3);
+        PlayerPrefs.SetInt("Step", step + 2);
         PlayerPrefs.Save();
     }
     private void OnTriggerEnter(Collider other)

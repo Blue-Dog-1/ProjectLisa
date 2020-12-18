@@ -24,9 +24,7 @@ public class MobailControl : MonoBehaviour
         Speed = speed;
         Events.seconds = seconds;
         Events.Player = gameObject;
-    }
-    void Start()
-    {
+
         Events.Move += () => {
             if (ScriptUI.isStarted)
                 if (Input.touchCount > 0 || Input.GetMouseButton(0))
@@ -38,7 +36,9 @@ public class MobailControl : MonoBehaviour
                     };
                 }
         };
-
+    }
+    void Start()
+    {
         direction = Vector3.zero;
         newPos = transform.position;
         StartCoroutine(loop());

@@ -47,7 +47,7 @@ public class SpawnObjects : MonoBehaviour
             indent += bop.Objects.indent;
             
             StarPosition.z = indent;
-            StarPosition.x = Random.Range(-1, 1);
+            //StarPosition.x = Random.Range(-1, 1);
             o.transform.position = StarPosition;
 
             indent += bop.Objects.indent;
@@ -83,7 +83,7 @@ public class SpawnObjects : MonoBehaviour
             indent += bop.Objects.indent;
             
             StarPosition.z = indent;
-            StarPosition.x = Random.Range(-1, 1);
+            //StarPosition.x = Random.Range(-1, 1);
 
             indent += bop.Objects.indent;
 
@@ -97,10 +97,6 @@ public class SpawnObjects : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()
@@ -109,5 +105,101 @@ public class SpawnObjects : MonoBehaviour
         Gizmos.DrawLine(transform.position, groundCarent.transform.position);
     }
 #endif
+
+    public ObjectsPrefab objects;
+    public Vector3 SizeObject = Vector3.one;
+    public Vector3 PositionOffset = Vector3.zero;
+
+    public void Build()
+    {
+
+
+        SizeObject = objects.SizeObject;
+        PositionOffset = objects.PositionOffset;
+
+        PrimitiveType ConvetrPrimitiveType(primitiveType type)
+        {
+            switch (type)
+            {
+                case primitiveType.Capsule:
+                    return PrimitiveType.Capsule;
+                case primitiveType.Cube:
+                    return PrimitiveType.Cube;
+                case primitiveType.Quad:
+                    return PrimitiveType.Quad;
+                case primitiveType.Cylinder:
+                    return PrimitiveType.Cylinder;
+                case primitiveType.Sphere:
+                    return PrimitiveType.Sphere;
+                case primitiveType.Plane:
+                    return PrimitiveType.Plane;
+            }
+            return PrimitiveType.Cube;
+        }
+
+        foreach (CildObject item in objects.CildObjects)
+        {
+            // Create objent as primitive
+            GameObject t;
+            if (item.type != primitiveType.Mesh)
+                t = GameObject.CreatePrimitive(ConvetrPrimitiveType(item.type));
+            else
+            {
+                t = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                t.GetComponent<MeshFilter>().mesh = item.Mesh;
+                if (Application.isEditor)
+                    DestroyImmediate(t.GetComponent<Collider>());
+                else
+                    Destroy(t.GetComponent<Collider>());
+                var coll = t.AddComponent<MeshCollider>();
+                coll.sharedMesh = item.Mesh;
+                coll.convex = true;
+
+            }
+
+            // Set parent and name
+            t.transform.parent = transform;
+            t.name = item.name;
+            // Set Transform
+
+            t.transform.localPosition = item.position;
+            t.transform.localRotation = item.rotation;
+            t.transform.localScale = item.scale;
+
+            // Set material
+            t.GetComponent<MeshRenderer>().material = item.material;
+
+            // Set rigitbody
+            var rb = t.AddComponent<Rigidbody>();
+            rb.mass = item.mass;
+
+            // set joint
+
+            foreach (JointsObject jointdata in item.joints)
+            {
+                var j = t.AddComponent(ComponentType.GetCompType(jointdata.typeJoint)) as Joint;
+                j.breakForce = jointdata.breakForce;
+                j.breakTorque = jointdata.breakTorque;
+                j.massScale = jointdata.massScale;
+                j.anchor = jointdata.anchor;
+                j.axis = jointdata.axis;
+            }
+            // Set MehsDefor script
+            t.AddComponent<MeshDeform>();
+        }
+        // set connect body 
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var item = objects.CildObjects[i];
+
+            foreach (JointsObject jointdata in item.joints)
+            {
+                if (jointdata.SerialNamberConnectbody < 0) continue;
+                var obj = transform.GetChild(i);
+                var j = obj.GetComponent(ComponentType.GetCompType(jointdata.typeJoint)) as Joint;
+                j.connectedBody = transform.GetChild(jointdata.SerialNamberConnectbody).GetComponent<Rigidbody>();
+            }
+        }
+    }
 
 }

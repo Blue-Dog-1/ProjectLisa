@@ -12,6 +12,8 @@ namespace UnityEngine
         public delegate void EventHandler();
         static public event EventHandler Finish;
         static public event EventHandler BrakeSpawn;
+        static public EventHandler ShowAds;
+        static public EventHandler Restart;
 
         static public EventHandler Move;
 
@@ -20,13 +22,14 @@ namespace UnityEngine
 
         static public GameObject Player { get; set; }
 
-        static public bool ShowAdsInNexLevel { get; set; }
-
+        static public int QuantityObjects { get; set; }
         static public void Cliner()
         {
             Finish = delegate () { };
             BrakeSpawn = delegate () { };
+            ShowAds = delegate () { };
             Move = () => { };
+            Restart = () => { };
         }
         static public void onFinish() =>
             Finish?.Invoke();
